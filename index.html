@@ -6,13 +6,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
+        <title>2013 Miles Rausch Family Christmas Card</title>
+        <meta name="description" content="2013 Miles Rausch Family Christmas Card">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="bower_components/reveal.js/css/reveal.min.css">
+		<link rel="stylesheet" href="bower_components/reveal.js/css/theme/default.css" id="theme">
         <link rel="stylesheet" href="css/main.css">
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
@@ -21,22 +20,52 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+                    <section id="title">
+                        <h1>
+                            <small>The</small>
+                            <span class="first">Miles</span>
+                            <span class="last">Rausch</span>
+                            <span class="category">Family</span>
+                            <small>2013</small>
+                        </h1>
+                    </section>
+                    <section>
+                        <p>2013 was a maintenance release for us: no new kids, no new jobs, no new dwellings. So what *did* happen this year? Let's take a look at the numbers.</p>
+                        <p class="fragment roll-in">Your subjects:</p>
+                        <span class="fragment roll-in miles">MILES (man, blue)</span>
+                        <span class="fragment roll-in holli">HOLLI (woman, pink)</span>
+                        <span class="fragment roll-in ian">IAN (man, bright blue)</span>
+                        <span class="fragment roll-in ainsley">AINSLEY (woman, bright pink)</span>
+                    </section>
+                    <section>
+                        <p>This was a year for landmark birthdays. Ian and Holli made respectable progress, turning 4 and 27 respectively. Ainsley finally crossed into whole numbers, a feat celebrated with a cathartically destroyed cake. Miles,  meanwhile, reluctantly stepped into his third decade, a milestone which was made easier by the fantastic surprise party planned and executed by Holli.</p>
+                        <p>(bar: <a href="#averageAgeChart" data-values="29,26,2,0">2012</a>, <a href="#averageAgeChart" data-values="30,27,3,1">2013</a>)</p>
+                        
+                        <canvas id="averageAgeChart" width="800" height="400" data-labels="Miles,Holli,Ian,Ainsley"></canvas>
+                    </section>
+				</section>
+            </div>
+            
+        </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
+            ga('create','UA-96981-2');ga('send','pageview');
         </script>
     </body>
 </html>
