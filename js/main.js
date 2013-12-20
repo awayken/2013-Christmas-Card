@@ -2,7 +2,7 @@
     // Full list of configuration options available here:
     // https://github.com/hakimel/reveal.js#configuration
     Reveal.initialize({
-        controls: false,
+        controls: true,
         progress: false,
         history: true,
         center: true,
@@ -28,22 +28,56 @@
     var GraphBuilder = function( id, chartType ) {
         this.id = id;
         this.obj = document.getElementById( this.id );
+        this.jobj = $( this.obj );
+        this.slide = this.jobj.parents('section');
         this.ctx = this.obj.getContext('2d');
         
+        this.toggles = [];
         this.chartType = chartType;
-        this.labels = $( this.obj ).data('labels').split(',');
+        this.labels = this.jobj.data('labels').split(',');
     };
-    GraphBuilder.prototype.draw = function() {
+    GraphBuilder.prototype.setToggles = function() {
+        this.slide.find('a[href="#' + this.id + '"]').each(function( index, element ) {
+            var jelement = $( element ),
+                values = jelement.data('values').split(',');
+            
+            this.toggles[ index ] = values;
+            
+            jelement.click(function( ev ) {
+                ev.preventDefault();
+                this.draw( values );
+            }.bind( this ));
+            
+        }.bind( this ));
+    };
+    GraphBuilder.prototype.draw = function( values ) {
+        var data = [];
+        
+        if ( !values && this.toggles.length ) {
+            values = this.toggles[ 0 ];
+        }
+        
         switch( this.chartType ) {
+            case 'pie':
+                for ( var index in values ) {
+                    data.push({
+                        value: parseInt( values[ index ], 10 ),
+                        color: '#FF00FF' // get random color
+                    });
+                }
+                this.chart = new Chart( this.ctx ).Pie( data );
+                break;
+                
             case 'bar':
             default:
+                data = values;
                 this.chart = new Chart( this.ctx ).Bar({
                     labels: this.labels,
                     datasets: [
                         {
-                            fillColor : "rgba(220,220,220,0.5)",
-                            strokeColor : "rgba(220,220,220,1)",
-                            data : [29, 26, 2, 0]
+                            fillColor: "rgba(220,220,220,0.5)",
+                            strokeColor: "rgba(220,220,220,1)",
+                            data: data
                         }
                     ]
                 });
@@ -52,5 +86,10 @@
     };
     
     var averageAge = new GraphBuilder( 'averageAgeChart', 'bar' );
+    averageAge.setToggles();
     averageAge.draw();
+    
+    var entertainment = new GraphBuilder( 'entertainment', 'pie' );
+    entertainment.setToggles();
+    entertainment.draw();
 }());

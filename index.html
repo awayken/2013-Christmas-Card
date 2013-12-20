@@ -23,33 +23,69 @@
 
 		<div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-                    <section id="title">
-                        <h1>
-                            <small>The</small>
-                            <span class="first">Miles</span>
-                            <span class="last">Rausch</span>
-                            <span class="category">Family</span>
-                            <small>2013</small>
-                        </h1>
-                    </section>
-                    <section>
-                        <p>2013 was a maintenance release for us: no new kids, no new jobs, no new dwellings. So what *did* happen this year? Let's take a look at the numbers.</p>
-                        <p class="fragment roll-in">Your subjects:</p>
-                        <span class="fragment roll-in miles">MILES (man, blue)</span>
-                        <span class="fragment roll-in holli">HOLLI (woman, pink)</span>
-                        <span class="fragment roll-in ian">IAN (man, bright blue)</span>
-                        <span class="fragment roll-in ainsley">AINSLEY (woman, bright pink)</span>
-                    </section>
-                    <section>
-                        <p>This was a year for landmark birthdays. Ian and Holli made respectable progress, turning 4 and 27 respectively. Ainsley finally crossed into whole numbers, a feat celebrated with a cathartically destroyed cake. Miles,  meanwhile, reluctantly stepped into his third decade, a milestone which was made easier by the fantastic surprise party planned and executed by Holli.</p>
-                        <p>(bar: <a href="#averageAgeChart" data-values="29,26,2,0">2012</a>, <a href="#averageAgeChart" data-values="30,27,3,1">2013</a>)</p>
-                        
-                        <canvas id="averageAgeChart" width="800" height="400" data-labels="Miles,Holli,Ian,Ainsley"></canvas>
-                    </section>
-				</section>
+                
+            <!-- TITLE -->
+                <section id="title">
+                    <h1>
+                        <small>The</small>
+                        <span class="first">Miles</span>
+                        <span class="last">Rausch</span>
+                        <span class="category">Family</span>
+                        <small>2013</small>
+                    </h1>
+                    <p>Hit 'space' or the 'down arrow' to continue, or use the controls on the right.</p>
+                </section>
+                
+            <!-- INTRODUCTION -->
+                <section>
+                    <p>2013 was a maintenance release for us: no new kids, no new jobs, no new dwellings. So what *did* happen this year? Let's take a look at the numbers.</p>
+                    <p class="fragment roll-in">Your subjects:</p>
+                    <span class="fragment roll-in miles">MILES (man, blue)</span>
+                    <span class="fragment roll-in holli">HOLLI (woman, pink)</span>
+                    <span class="fragment roll-in ian">IAN (man, bright blue)</span>
+                    <span class="fragment roll-in ainsley">AINSLEY (woman, bright pink)</span>
+                </section>
+                
+            <!-- AVERAGE AGE -->
+                <section>
+                    <p>This was a year for landmark birthdays. Ian and Holli made respectable progress, turning 4 and 27 respectively. Ainsley finally crossed into whole numbers, a feat celebrated with a catharticly destroyed cake. Miles,  meanwhile, reluctantly stepped into his third decade, a milestone which was made easier by the fantastic surprise party planned and executed by Holli.</p>
+                    <p>(bar: <a href="#averageAgeChart" data-values="29,26,2,0">2012</a>, <a href="#averageAgeChart" data-values="30,27,3,1">2013</a>)</p>
+                    
+                    <canvas id="averageAgeChart" width="800" height="400" data-labels="Miles,Holli,Ian,Ainsley"></canvas>
+                </section>
+                
+            <!-- ENTERTAINMENT -->
+            <!--
+Miles: Gravity, AD, Doctor Who, On Writing, Harlem Shake, Dubstep
+Holli: Doctor Who, HIMYM, Harlem Shake
+HIMYM 10%
+Downton Abbey 7%
+Dr Who 15%
+Mumford and Sons 8%
+Pentatonix 6%
+Scrubs 9%
+Parenthood 8%
+Parks and Rec 8%
+Arrested Development 9%
+New Girl 11%
+The Mindy Project 9% 
+
+Ian: Thomas1, Cars, Cars II, Dinosaur Train, Harlem Shake
+If you want to be funny, you can list all of Ian's at the same percentages. 
+
+Ainsley: Harlem Shake, Doctor Who, HIMYM, Thomas2, A Brief History of Time
+
+
+1 went asa Thomas (image)
+2 went as Sir Topham Hatt (image)
+            -->
+                <section>
+                    <p>Yo Gabba Gabba is out; Thomas is in; Doctor Who turns 50; and Ainsley has to endure it all. Here is what filled out leisure time this year.</p>
+                    <p>(pie chart: <a href="#entertainment" data-values="45,30,10,6,5,4">Miles</a>, <a href="#entertainment" data-values="10,7,15,8,6,9,8,8,9,11,9">Holli</a>,<a href="#entertainment" data-values="35,20,30,10,5">Ian</a>, <a href="#entertainment" data-values="5,30,30,15,20">Ainsley</a>)</p>
+                    
+                    <canvas id="entertainment" width="800" height="400" data-labels=""></canvas>
+                </section>
             </div>
             
         </div>
