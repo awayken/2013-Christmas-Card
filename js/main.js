@@ -1,28 +1,19 @@
 (function(){
-    // Full list of configuration options available here:
-    // https://github.com/hakimel/reveal.js#configuration
+    'use strict';
+
     Reveal.initialize({
         controls: true,
         progress: false,
-        history: true,
+	history: false,
         center: true,
-    
-        theme: 'default', // available themes are in /css/theme
-        transition: 'default', // default/cube/page/concave/zoom/linear/fade/none
     
         // Parallax scrolling
         // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
         // parallaxBackgroundSize: '2100px 900px',
-    
-        // Optional libraries used to extend on reveal.js
-        dependencies: [
-            { src: 'bower_components/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-            { src: 'bower_components/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-            { src: 'bower_components/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-            { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-            { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-            { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-        ]
+
+	theme: 'default', // available themes are in /css/theme
+	transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+	transitionSpeed: 'fast' // default/fast/slow
     });
     
     var GraphBuilder = function( id, chartType ) {
