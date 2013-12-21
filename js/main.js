@@ -1,19 +1,19 @@
 (function(){
     'use strict';
-
+    
     Reveal.initialize({
         controls: true,
         progress: false,
-	history: false,
+        history: false,
         center: true,
     
         // Parallax scrolling
         // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
         // parallaxBackgroundSize: '2100px 900px',
-
-	theme: 'default', // available themes are in /css/theme
-	transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
-	transitionSpeed: 'fast' // default/fast/slow
+        
+        theme: 'default', // available themes are in /css/theme
+        transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+        transitionSpeed: 'fast' // default/fast/slow
     });
     
     var GraphBuilder = function( id, chartType ) {
@@ -106,19 +106,30 @@
         }
     };
     
-    var averageAge = new GraphBuilder( 'averageAgeChart', 'bar' );
-    averageAge.setToggles();
-    averageAge.draw();
-    
-    var entertainment = new GraphBuilder( 'entertainment', 'pie' );
-    entertainment.setToggles();
-    entertainment.draw();
-    
-    var work = new GraphBuilder( 'work', 'polar' );
-    work.setToggles();
-    work.draw();
-    
-    var upgrade = new GraphBuilder( 'upgrade', 'line' );
-    upgrade.setToggles();
-    upgrade.draw();
+    Reveal.addEventListener( 'slidechanged', function( ev ) {
+        var slideGraph;
+        
+        switch( ev.currentSlide.id ) {
+            case 'averageAgeSlide':
+                slideGraph = new GraphBuilder( 'averageAgeChart', 'bar' );
+                slideGraph.setToggles();
+                slideGraph.draw();
+                break;
+            case 'entertainmentSlide':
+                slideGraph = new GraphBuilder( 'entertainment', 'pie' );
+                slideGraph.setToggles();
+                slideGraph.draw();
+                break;
+            case 'workSlide':
+                slideGraph = new GraphBuilder( 'work', 'polar' );
+                slideGraph.setToggles();
+                slideGraph.draw();
+                break;
+            case 'upgradeSlide':
+                slideGraph = new GraphBuilder( 'upgrade', 'line' );
+                slideGraph.setToggles();
+                slideGraph.draw();
+                break;
+        }
+    });
 }());
