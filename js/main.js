@@ -78,6 +78,22 @@
                 this.chart = new Chart( this.ctx ).PolarArea( data );
                 break;
                 
+            case 'line':
+                data = values;
+                this.chart = new Chart( this.ctx ).Line({
+                    labels: this.labels,
+                    datasets: [
+                        {
+                            fillColor : "rgba(220,220,220,0.5)",
+                            strokeColor : "rgba(220,220,220,1)",
+                            pointColor : "rgba(220,220,220,1)",
+                            pointStrokeColor : "#fff",
+                            data: data
+                        }
+                    ]
+                });
+                break;
+                
             case 'bar':
             default:
                 data = values;
@@ -106,4 +122,8 @@
     var work = new GraphBuilder( 'work', 'polar' );
     work.setToggles();
     work.draw();
+    
+    var upgrade = new GraphBuilder( 'upgrade', 'line' );
+    upgrade.setToggles();
+    upgrade.draw();
 }());
