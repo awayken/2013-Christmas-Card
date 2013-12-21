@@ -68,6 +68,16 @@
                 this.chart = new Chart( this.ctx ).Pie( data );
                 break;
                 
+            case 'polar':
+                for ( var index in values ) {
+                    data.push({
+                        value: parseInt( values[ index ], 10 ),
+                        color: '#00FF00' // get random color
+                    });
+                }
+                this.chart = new Chart( this.ctx ).PolarArea( data );
+                break;
+                
             case 'bar':
             default:
                 data = values;
@@ -92,4 +102,8 @@
     var entertainment = new GraphBuilder( 'entertainment', 'pie' );
     entertainment.setToggles();
     entertainment.draw();
+    
+    var work = new GraphBuilder( 'work', 'polar' );
+    work.setToggles();
+    work.draw();
 }());
