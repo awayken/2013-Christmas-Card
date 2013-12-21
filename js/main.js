@@ -34,27 +34,31 @@
         
         this.toggles = [];
         this.chartType = chartType;
-        this.labels = this.jobj.data('labels').split(',');
     };
     GraphBuilder.prototype.setToggles = function() {
         this.slide.find('a[href="#' + this.id + '"]').each(function( index, element ) {
             var jelement = $( element ),
-                values = jelement.data('values').split(',');
+                values = jelement.data('values').split(','),
+                labels = jelement.data('labels').split(',');
             
-            this.toggles[ index ] = values;
+            this.toggles[ index ] = {
+                values: values,
+                labels: labels
+            };
             
             jelement.click(function( ev ) {
                 ev.preventDefault();
-                this.draw( values );
+                this.draw( values, labels );
             }.bind( this ));
             
         }.bind( this ));
     };
-    GraphBuilder.prototype.draw = function( values ) {
+    GraphBuilder.prototype.draw = function( values, labels ) {
         var data = [];
         
         if ( !values && this.toggles.length ) {
-            values = this.toggles[ 0 ];
+            values = this.toggles[ 0 ].values;
+            labels = this.toggles[ 0 ].labels;
         }
         
         switch( this.chartType ) {
@@ -81,7 +85,7 @@
             case 'line':
                 data = values;
                 this.chart = new Chart( this.ctx ).Line({
-                    labels: this.labels,
+                    labels: labels,
                     datasets: [
                         {
                             fillColor : "rgba(220,220,220,0.5)",
@@ -98,7 +102,7 @@
             default:
                 data = values;
                 this.chart = new Chart( this.ctx ).Bar({
-                    labels: this.labels,
+                    labels: labels,
                     datasets: [
                         {
                             fillColor: "rgba(220,220,220,0.5)",
