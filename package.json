@@ -1,0 +1,29 @@
+{
+  "name": "2013-Christmas-Card",
+  "version": "0.0.1",
+  "description": "For our Christmas Card this year, we present 2013 by the numbers.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/awayken/2013-Christmas-Card.git"
+  },
+  "keywords": [
+    "christmas",
+    "card"
+  ],
+  "author": "Miles Rausch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/awayken/2013-Christmas-Card/issues"
+  },
+  "homepage": "https://github.com/awayken/2013-Christmas-Card",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "~0.6.3",
+    "grunt-contrib-nodeunit": "~0.2.0",
+    "grunt-contrib-uglify": "~0.2.2"
+  }
+}
