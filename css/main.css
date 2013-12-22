@@ -97,20 +97,74 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+#title h1 small {
+    display: block;
+    position: relative;
+}
+#title span {
+    display: inline-block;
+    vertical-align: middle;
+}
+#title .first, #title .category {
+    font-size: 0.75em;
+}
+#title .last {
+    margin: 0 0.25em;
+}
+#title h1 small:before, #title h1 small:after {
+    content: '';
+    display: block;
+    width: 42%;
+    height: 2px;
+    border-bottom: 2px solid white;
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+}
+#title h1 small:after {
+    margin-top: 0;
+    left: auto;
+    right: 0;
+    top: 0.5em;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+.reveal .legend {
+    padding: 1em 0;
+}
+.legend .miles {
+    color: #4169E1;
+}
+.legend .ian {
+    color: #87CEFA;
+}
+.legend .holli {
+    color: #FF1493;
+}
+.legend .ainsley {
+    color: #FFC0CB;
+}
+.legend .ian img, .legend .ainsley img {
+    height: 4em;
+}
+.legend ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.legend ul li {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 24%;
+}
+.legend ul li img {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    display: block;
+    margin: 0 auto 0.5em auto;
+}
 
 
 /* ==========================================================================
