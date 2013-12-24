@@ -44,6 +44,28 @@
             
         }.bind( this ));
     };
+    GraphBuilder.prototype.getColor = function( index ) {
+        var colors = [
+            '#7FFFD4', // Aquamarine 
+            '#A52A2A', // Brown
+            '#5F9EA0', // CadetBlue
+            '#6495ED', // CornflowerBlue
+            '#DC143C', // Crimson
+            '#006400', // DarkGreen
+            '#FF8C00', // DarkOrange
+            '#E9967A', // DarkSalmon
+            '#B22222', // FireBrick
+            '#4B0082', // Indigo
+            '#20B2AA', // LightSeaGreen
+            '#BA55D3', // MediumOrchid
+            '#808000', // Olive
+            '#DDA0DD', // Plum
+            '#FF6347', // Tomato
+            '#9ACD32'  // YellowGreen
+        ];
+        
+        return colors[ index ];
+    };
     GraphBuilder.prototype.draw = function( values, labels ) {
         var data = [];
         
@@ -57,7 +79,7 @@
                 for ( var index in values ) {
                     data.push({
                         value: parseInt( values[ index ], 10 ),
-                        color: '#FF00FF' // get random color
+                        color: this.getColor( index )
                     });
                 }
                 this.chart = new Chart( this.ctx ).Pie( data );
@@ -67,7 +89,7 @@
                 for ( var index in values ) {
                     data.push({
                         value: parseInt( values[ index ], 10 ),
-                        color: '#00FF00' // get random color
+                        color: this.getColor( index )
                     });
                 }
                 this.chart = new Chart( this.ctx ).PolarArea( data );
@@ -79,9 +101,9 @@
                     labels: labels,
                     datasets: [
                         {
-                            fillColor : "rgba(220,220,220,0.5)",
-                            strokeColor : "rgba(220,220,220,1)",
-                            pointColor : "rgba(220,220,220,1)",
+                            fillColor : "rgba(46,139,87,0.5)",
+                            strokeColor : "rgb(46,139,87)",
+                            pointColor : "rgb(220,220,220)",
                             pointStrokeColor : "#fff",
                             data: data
                         }
@@ -96,8 +118,8 @@
                     labels: labels,
                     datasets: [
                         {
-                            fillColor: "rgba(220,220,220,0.5)",
-                            strokeColor: "rgba(220,220,220,1)",
+                            fillColor: "rgba(255,165,0,0.5)",
+                            strokeColor: "rgb(255,165,0)",
                             data: data
                         }
                     ]
