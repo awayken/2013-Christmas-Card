@@ -166,6 +166,20 @@ textarea {
     margin: 0 auto 0.5em auto;
 }
 
+.toggle, .reveal .toggle {
+    display: block;
+    list-style: none;
+    margin: 0.5em 0;
+    padding: 0;
+    text-align: center;
+}
+.toggle li {
+    display: inline-block;
+    margin: 0;
+    padding: 0 0.5em;
+    vertical-align: top;
+}
+
 
 /* ==========================================================================
    Helper classes
