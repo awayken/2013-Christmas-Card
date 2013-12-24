@@ -97,6 +97,35 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+.miles, a.miles:link, a.miles:visited {
+    color: #4169E1;
+}
+.reveal a.miles:hover, .reveal a.miles:active {
+    color: #4169E1;
+    text-decoration: underline;
+}
+.holli, a.holli:link, a.holli:visited {
+    color: #FF1493;
+}
+.reveal a.holli:hover, .reveal a.holli:active {
+    color: #FF1493;
+    text-decoration: underline;
+}
+.ian, a.ian:link, a.ian:visited {
+    color: #87CEFA;
+}
+.reveal a.ian:hover, .reveal a.ian:active {
+    color: #87CEFA;
+    text-decoration: underline;
+}
+.ainsley, a.ainsley:link, a.ainsley:visited {
+    color: #FFC0CB;
+}
+.reveal a.ainsley:hover, .reveal a.ainsley:active {
+    color: #FFC0CB;
+    text-decoration: underline;
+}
+
 #title h1 small {
     display: block;
     position: relative;
@@ -130,18 +159,6 @@ textarea {
 
 .reveal .legend {
     padding: 1em 0;
-}
-.legend .miles {
-    color: #4169E1;
-}
-.legend .ian {
-    color: #87CEFA;
-}
-.legend .holli {
-    color: #FF1493;
-}
-.legend .ainsley {
-    color: #FFC0CB;
 }
 .legend .ian img, .legend .ainsley img {
     height: 4em;
