@@ -19,9 +19,7 @@ module.exports = function(grunt) {
             },
             all: [
                 'Gruntfile.js',
-                'js/{,*/}*.js',
-                '!js/plugins.js',
-                '!js/vendor/*',
+                'js/main.js'
             ]
         },
         server: {
@@ -31,20 +29,31 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     
-//    grunt.registerTask('server', function (target) {
-//        if (target === 'dist') {
-//            return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
-//        }
-//
-//        grunt.task.run([
-//            //'clean:server',
-//            //'compass:server',
-//            'connect:livereload',
-//            //'copy',
-//            'open',
-//            'watch'
-//        ]);
-//    });
+    grunt.registerTask('about', function() {
+        var pkg = grunt.file.readJSON('package.json'),
+            bar = '----------------------------------------';
+        
+        console.log( bar );
+        console.log( ' ' + pkg.name );
+        console.log( ' By ' + pkg.author );
+        console.log( bar );
+        console.log( pkg.description );
+    });
+
+    grunt.registerTask('server', function (target) {
+        if (target === 'dist') {
+            return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
+        }
     
-    grunt.registerTask('default', ['jshint']);
+        grunt.task.run([
+            //'clean:server',
+            //'compass:server',
+            //'connect:livereload',
+            //'copy',
+            'open',
+            'watch'
+        ]);
+    });
+    
+    grunt.registerTask('default', ['about']);
 };
