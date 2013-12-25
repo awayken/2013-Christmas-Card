@@ -76,55 +76,55 @@
         }
         
         switch( this.chartType ) {
-            case 'pie':
-                for ( index in values ) {
-                    data.push({
-                        value: parseInt( values[ index ], 10 ),
-                        color: this.getColor( index )
-                    });
-                }
-                this.chart = new Chart( this.ctx ).Pie( data );
-                break;
-                
-            case 'polar':
-                for ( index in values ) {
-                    data.push({
-                        value: parseInt( values[ index ], 10 ),
-                        color: this.getColor( index )
-                    });
-                }
-                this.chart = new Chart( this.ctx ).PolarArea( data );
-                break;
-                
-            case 'line':
-                data = values;
-                this.chart = new Chart( this.ctx ).Line({
-                    labels: labels,
-                    datasets: [
-                        {
-                            fillColor : "rgba(46,139,87,0.5)",
-                            strokeColor : "rgb(46,139,87)",
-                            pointColor : "rgb(220,220,220)",
-                            pointStrokeColor : "#fff",
-                            data: data
-                        }
-                    ]
+        case 'pie':
+            for ( index in values ) {
+                data.push({
+                    value: parseInt( values[ index ], 10 ),
+                    color: this.getColor( index )
                 });
-                break;
-                
-            case 'bar':
-                data = values;
-                this.chart = new Chart( this.ctx ).Bar({
-                    labels: labels,
-                    datasets: [
-                        {
-                            fillColor: "rgba(255,165,0,0.5)",
-                            strokeColor: "rgb(255,165,0)",
-                            data: data
-                        }
-                    ]
+            }
+            this.chart = new Chart( this.ctx ).Pie( data );
+            break;
+            
+        case 'polar':
+            for ( index in values ) {
+                data.push({
+                    value: parseInt( values[ index ], 10 ),
+                    color: this.getColor( index )
                 });
-                break;
+            }
+            this.chart = new Chart( this.ctx ).PolarArea( data );
+            break;
+            
+        case 'line':
+            data = values;
+            this.chart = new Chart( this.ctx ).Line({
+                labels: labels,
+                datasets: [
+                    {
+                        fillColor : 'rgba(46,139,87,0.5)',
+                        strokeColor : 'rgb(46,139,87)',
+                        pointColor : 'rgb(220,220,220)',
+                        pointStrokeColor : 'rgb(255, 255, 255)',
+                        data: data
+                    }
+                ]
+            });
+            break;
+            
+        case 'bar':
+            data = values;
+            this.chart = new Chart( this.ctx ).Bar({
+                labels: labels,
+                datasets: [
+                    {
+                        fillColor: 'rgba(255,165,0,0.5)',
+                        strokeColor: 'rgb(255,165,0)',
+                        data: data
+                    }
+                ]
+            });
+            break;
         }
     };
     
@@ -132,26 +132,26 @@
         var slideGraph;
         
         switch( ev.currentSlide.id ) {
-            case 'averageAgeSlide':
-                slideGraph = new GraphBuilder( 'averageAgeChart', 'bar' );
-                slideGraph.setToggles();
-                slideGraph.draw();
-                break;
-            case 'entertainmentSlide':
-                slideGraph = new GraphBuilder( 'entertainment', 'pie' );
-                slideGraph.setToggles();
-                slideGraph.draw();
-                break;
-            case 'workSlide':
-                slideGraph = new GraphBuilder( 'work', 'polar' );
-                slideGraph.setToggles();
-                slideGraph.draw();
-                break;
-            case 'upgradeSlide':
-                slideGraph = new GraphBuilder( 'upgrade', 'line' );
-                slideGraph.setToggles();
-                slideGraph.draw();
-                break;
+        case 'averageAgeSlide':
+            slideGraph = new GraphBuilder( 'averageAgeChart', 'bar' );
+            slideGraph.setToggles();
+            slideGraph.draw();
+            break;
+        case 'entertainmentSlide':
+            slideGraph = new GraphBuilder( 'entertainment', 'pie' );
+            slideGraph.setToggles();
+            slideGraph.draw();
+            break;
+        case 'workSlide':
+            slideGraph = new GraphBuilder( 'work', 'polar' );
+            slideGraph.setToggles();
+            slideGraph.draw();
+            break;
+        case 'upgradeSlide':
+            slideGraph = new GraphBuilder( 'upgrade', 'line' );
+            slideGraph.setToggles();
+            slideGraph.draw();
+            break;
         }
     });
 }());
