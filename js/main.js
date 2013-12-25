@@ -67,7 +67,8 @@
         return colors[ index ];
     };
     GraphBuilder.prototype.draw = function( values, labels ) {
-        var data = [];
+        var data = [],
+            index;
         
         if ( !values && this.toggles.length ) {
             values = this.toggles[ 0 ].values;
@@ -76,7 +77,7 @@
         
         switch( this.chartType ) {
             case 'pie':
-                for ( var index in values ) {
+                for ( index in values ) {
                     data.push({
                         value: parseInt( values[ index ], 10 ),
                         color: this.getColor( index )
@@ -86,7 +87,7 @@
                 break;
                 
             case 'polar':
-                for ( var index in values ) {
+                for ( index in values ) {
                     data.push({
                         value: parseInt( values[ index ], 10 ),
                         color: this.getColor( index )
@@ -112,7 +113,6 @@
                 break;
                 
             case 'bar':
-            default:
                 data = values;
                 this.chart = new Chart( this.ctx ).Bar({
                     labels: labels,
