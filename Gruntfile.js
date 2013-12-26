@@ -51,17 +51,8 @@ module.exports = function(grunt) {
     });
 
     grunt.registerTask('server', function (target) {
-        if (target === 'dist') {
-            return grunt.task.run(['build', 'open', 'connect:dist:keepalive']);
-        }
-    
         grunt.task.run([
-            //'clean:server',
-            //'compass:server',
-            //'connect:livereload',
-            //'copy',
-            'open',
-            'watch'
+            'connect:server'
         ]);
     });
     
