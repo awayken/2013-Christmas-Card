@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         connect: {
-            server: {
+            local: {
                 options: {
                     port: 3333,
                     debug: true,
@@ -52,7 +52,7 @@ module.exports = function(grunt) {
 
     grunt.registerTask('server', function (target) {
         grunt.task.run([
-            'connect:server'
+            'connect:local'
         ]);
     });
     
