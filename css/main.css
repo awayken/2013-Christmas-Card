@@ -98,11 +98,16 @@ textarea {
    ========================================================================== */
 
 .miles, a.miles:link, a.miles:visited {
-    color: #4169E1;
+    color: #009DFF;
 }
 .reveal a.miles:hover, .reveal a.miles:active {
-    color: #4169E1;
+    color: #009DFF;
     text-decoration: underline;
+}
+.reveal .miles img {
+    background: #009DFF;
+    border-radius: 1em;
+    padding: 0.5em 0;
 }
 .holli, a.holli:link, a.holli:visited {
     color: #FF1493;
@@ -111,6 +116,11 @@ textarea {
     color: #FF1493;
     text-decoration: underline;
 }
+.reveal .holli img {
+    background: #FF1493;
+    border-radius: 1em;
+    padding: 0.5em 0;
+}
 .ian, a.ian:link, a.ian:visited {
     color: #87CEFA;
 }
@@ -118,12 +128,22 @@ textarea {
     color: #87CEFA;
     text-decoration: underline;
 }
+.reveal .ian img {
+    background: #87CEFA;
+    border-radius: 1em;
+    padding: 0.5em 0;
+}
 .ainsley, a.ainsley:link, a.ainsley:visited {
     color: #FFC0CB;
 }
 .reveal a.ainsley:hover, .reveal a.ainsley:active {
     color: #FFC0CB;
     text-decoration: underline;
+}
+.reveal .ainsley img {
+    background: #FFC0CB;
+    border-radius: 1em;
+    padding: 0.5em 0;
 }
 
 #title h1 small {
