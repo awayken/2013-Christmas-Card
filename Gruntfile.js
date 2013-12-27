@@ -50,7 +50,7 @@ module.exports = function(grunt) {
         console.log( pkg.description );
     });
 
-    grunt.registerTask('server', function (target) {
+    grunt.registerTask('server', function () {
         grunt.task.run([
             'connect:local'
         ]);
