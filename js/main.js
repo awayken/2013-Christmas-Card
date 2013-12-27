@@ -46,22 +46,23 @@
     };
     GraphBuilder.prototype.getColor = function( index ) {
         var colors = [
-            '#7FFFD4', // Aquamarine 
-            '#A52A2A', // Brown
-            '#5F9EA0', // CadetBlue
-            '#6495ED', // CornflowerBlue
-            '#DC143C', // Crimson
-            '#006400', // DarkGreen
+        // Red
+            '#FF6347', // Tomato
+            '#B22222', // FireBrick
+        // Orange and Yellow
             '#FF8C00', // DarkOrange
             '#E9967A', // DarkSalmon
-            '#B22222', // FireBrick
-            '#4B0082', // Indigo
-            '#20B2AA', // LightSeaGreen
-            '#BA55D3', // MediumOrchid
-            '#808000', // Olive
+        // Green
+            '#9ACD32', // YellowGreen
+            '#006400', // DarkGreen
+        // Blue
+            '#7FFFD4', // Aquamarine
+            '#6495ED', // CornflowerBlue
+            '#5F9EA0', // CadetBlue
+        // Violet
             '#DDA0DD', // Plum
-            '#FF6347', // Tomato
-            '#9ACD32'  // YellowGreen
+            '#BA55D3', // MediumOrchid
+            '#4B0082'  // Indigo
         ];
         
         return colors[ index ];
