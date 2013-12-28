@@ -1,6 +1,11 @@
 module.exports = function(grunt) {
     'use strict';
     
+    var appDetails = {
+        src: 'www',
+        dist: 'dist'
+    };
+    
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
@@ -8,6 +13,7 @@ module.exports = function(grunt) {
             local: {
                 options: {
                     port: 3333,
+                    base: appDetails.src,
                     debug: true,
                     keepalive: true
                 }
