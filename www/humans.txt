@@ -3,13 +3,17 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Miles Rausch -- lead developer -- @awayken
+    Holli Rausch -- consultant -- @holli_joi
 
 # THANKS
 
-    <name>
+    Ian Rausch, Ainsley Rausch
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
     Normalize.css, jQuery, Modernizr
+    Reveal.js, Chart.js
+    Grunt, Bower, NPM, Nodejs
+    JSHint, Connect
