@@ -218,14 +218,11 @@ textarea {
 }
 
 .reveal .seeit canvas {
-    float: left;
     height: 400px;
-    width: 400px;
+    width: 800px;
 }
 .reveal .seeit table {
-    float: right;
-    width: 398px;
-    vertical-align: top;
+    width: 800px;
 }
 .details tbody {
     border: 1px solid white;
@@ -344,7 +341,15 @@ textarea {
    ========================================================================== */
 
 @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+    .reveal .seeit canvas {
+        float: left;
+        height: 400px;
+        width: 400px;
+    }
+    .reveal .seeit table {
+        float: right;
+        width: 398px;
+    }
 }
 
 @media print,
