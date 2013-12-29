@@ -110,14 +110,14 @@ textarea {
     padding: 0.5em 0;
 }
 .holli, a.holli:link, a.holli:visited {
-    color: #FF1493;
+    color: #CE98A1;
 }
 .reveal a.holli:hover, .reveal a.holli:active {
-    color: #FF1493;
+    color: #CE98A1;
     text-decoration: underline;
 }
 .reveal .holli img {
-    background: #FF1493;
+    background: #CE98A1;
     border-radius: 1em;
     padding: 0.5em 0;
 }
