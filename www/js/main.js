@@ -6,14 +6,9 @@
         progress: false,
         history: false,
         center: true,
-    
-        // Parallax scrolling
-        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
-        // parallaxBackgroundSize: '2100px 900px',
-        
         theme: 'default', // available themes are in /css/theme
-        transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
-        transitionSpeed: 'fast' // default/fast/slow
+        transition: 'linear',
+        transitionSpeed: 'fast'
     });
     
     var GraphBuilder = function( id, chartType ) {
@@ -30,16 +25,18 @@
         this.slide.find('a[href="#' + this.id + '"]').each(function( index, element ) {
             var jelement = $( element ),
                 values = jelement.data('values').split(','),
-                labels = jelement.data('labels').split(',');
+                labels = jelement.data('labels').split(','),
+                details = $('#' + jelement.data('details') );
             
             this.toggles[ index ] = {
                 values: values,
-                labels: labels
+                labels: labels,
+                details: details
             };
             
             jelement.click(function( ev ) {
                 ev.preventDefault();
-                this.draw( values, labels );
+                this.draw( values, labels, details );
             }.bind( this ));
             
         }.bind( this ));
@@ -67,14 +64,18 @@
         
         return colors[ index ];
     };
-    GraphBuilder.prototype.draw = function( values, labels ) {
+    GraphBuilder.prototype.draw = function( values, labels, details ) {
         var data = [],
             index;
         
         if ( !values && this.toggles.length ) {
             values = this.toggles[ 0 ].values;
             labels = this.toggles[ 0 ].labels;
+            details = this.toggles[ 0 ].details;
         }
+        
+        $('.details').hide();
+        details.show();
         
         switch( this.chartType ) {
         case 'pie':

@@ -217,6 +217,12 @@ textarea {
     vertical-align: top;
 }
 
+.reveal .details {
+    display: inline-block;
+    width: 400px;
+    vertical-align: top;
+}
+
 
 /* ==========================================================================
    Helper classes

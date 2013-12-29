@@ -68,11 +68,67 @@
                     <p>This was a year for landmark birthdays. Ian and Holli made respectable progress, [turning 3] and 27 respectively. Ainsley crossed into whole numbers, a [feat celebrated] with a [catharticly destroyed cake]. Miles [reluctantly] stepped into his third decade, a milestone made easier by [the fantastic surprise party] planned and executed by Holli. Then he got [an iPad] &mdash; not too shabby.</p>
                     
                     <ul class="toggle">
-                        <li class="active"><a href="#averageAgeChart" data-values="29,26,2,0" data-labels="Miles,Holli,Ian,Ainsley">2012</a></li>
-                        <li><a href="#averageAgeChart" data-values="30,27,3,1" data-labels="Miles,Holli,Ian,Ainsley">2013</a></li>
+                        <li class="active"><a href="#averageAgeChart" data-values="29,26,2,0" data-labels="Miles,Holli,Ian,Ainsley" data-details="averageAgeChartDetails2012">2012</a></li>
+                        
+                        <li><a href="#averageAgeChart" data-values="30,27,3,1" data-labels="Miles,Holli,Ian,Ainsley" data-details="averageAgeChartDetails2013">2013</a></li>
+                        
                     </ul>
                     
-                    <canvas id="averageAgeChart" width="800" height="400"></canvas>
+                    <canvas id="averageAgeChart" width="400" height="400"></canvas>
+                    
+                    <table class="details" id="averageAgeChartDetails2012">
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Age</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="miles">
+                                <th>Miles</th>
+                                <td>29</td>
+                            </tr>
+                            <tr class="holli">
+                                <th>Holli</th>
+                                <td>26</td>
+                            </tr>
+                            <tr class="ian">
+                                <th>Ian</th>
+                                <td>2</td>
+                            </tr>
+                            <tr class="ainsley">
+                                <th>Ainsley</th>
+                                <td>0</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <table class="details" id="averageAgeChartDetails2013">
+                        <thead>
+                            <tr>
+                                <th>Subject</th>
+                                <th>Age</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="miles">
+                                <th>Miles</th>
+                                <td>30</td>
+                            </tr>
+                            <tr class="holli">
+                                <th>Holli</th>
+                                <td>37</td>
+                            </tr>
+                            <tr class="ian">
+                                <th>Ian</th>
+                                <td>3</td>
+                            </tr>
+                            <tr class="ainsley">
+                                <th>Ainsley</th>
+                                <td>1</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </section>
                 
             <!-- ENTERTAINMENT -->
@@ -80,13 +136,169 @@
                     <p>Gone are the days of Yo Gabba Gabba. Ian's current obsessions are Cars and Thomas (and particularly the version where Thomas talks). Thomas even made [an appearance at Halloween], with [Ainsley as Sir Topham Hatt]. Holli discovered "How I Met Your Mother", Miles exhausted [the Doctor Who] he could find, and Ainsley had to endure it all. Here is what else filled our leisure time this year.</p>
                     
                     <ul class="toggle">
-                        <li class="active"><a href="#entertainment" data-values="45,30,10,6,5,4" data-labels="Doctor Who,Arrested Development,On Writing,Dubstep,Harlem Shake,Gravity" class="miles">Miles</a></li>
-                        <li><a href="#entertainment" data-values="10,7,15,8,6,9,8,8,9,11,9" data-labels="HIMYM,Downton Abbey,Doctor Who,Mumford and Sons,Pentatoni,Scrubs,Parenthood,Parks and Rec,Arrested Development,New Girl,The Mindy Project" class="holli">Holli</a></li>
-                        <li><a href="#entertainment" data-values="35,20,30,10,5" data-labels="Thomas,Cars,Cars II,Dinosaur Train,Harlem Shake" class="ian">Ian</a></li>
-                        <li><a href="#entertainment" data-values="5,30,30,15,20" data-labels="Harlem Shake,Doctor Who,HIMYM,Thomas,A Brief History of Time" class="ainsley">Ainsley</a></li>
+                        <li class="active"><a href="#entertainment" data-values="45,30,10,6,5,4" data-labels="Doctor Who,Arrested Development,On Writing,Dubstep,Harlem Shake,Gravity" class="miles" data-details="entertainmentDetailsMiles">Miles</a></li>
+                        
+                        <li><a href="#entertainment" data-values="10,7,15,8,6,9,8,8,9,11,9" data-labels="HIMYM,Downton Abbey,Doctor Who,Mumford and Sons,Pentatonix,Scrubs,Parenthood,Parks and Rec,Arrested Development,New Girl,The Mindy Project" class="holli" data-details="entertainmentDetailsHolli">Holli</a></li>
+                        
+                        <li><a href="#entertainment" data-values="35,20,30,10,5" data-labels="Thomas,Cars,Cars II,Dinosaur Train,Harlem Shake" class="ian" data-details="entertainmentDetailsIan">Ian</a></li>
+                        
+                        <li><a href="#entertainment" data-values="5,30,30,15,20" data-labels="Harlem Shake,Doctor Who,HIMYM,Thomas,A Brief History of Time" class="ainsley" data-details="entertainmentDetailsAinsley">Ainsley</a></li>
+                        
                     </ul>
                     
-                    <canvas id="entertainment" width="800" height="400"></canvas>
+                    <canvas id="entertainment" width="400" height="400"></canvas>
+                    
+                    <table class="details" id="entertainmentDetailsMiles">
+                        <thead>
+                            <tr>
+                                <th>Entertainment</th>
+                                <th>Level</th>
+                            </tr>
+                        </thead>
+                        <tbody class="miles">
+                            <tr>
+                                <th>Doctor Who</th>
+                                <td>45</td>
+                            </tr>
+                            <tr>
+                                <th>Arrested Development</th>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <th>On Writing by Stephen King</th>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th>Dubstep</th>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <th>Harlem Shake</th>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <th>Gravity</th>
+                                <td>4</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <table class="details" id="entertainmentDetailsHolli">
+                        <thead>
+                            <tr>
+                                <th>Entertainment</th>
+                                <th>Level</th>
+                            </tr>
+                        </thead>
+                        <tbody class="holli">
+                            <tr>
+                                <th>How I Met Your Mother (HIMYM)</th>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th>Downton Abbey</th>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <th>Doctor Who</th>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <th>Mumford and Sons</th>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <th>Pentatonix</th>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <th>Scrubs</th>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <th>Parenthood</th>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <th>Parks and Rec</th>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <th>Arrested Development</th>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <th>New Girl</th>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <th>The Mindy Project</th>
+                                <td>9</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <table class="details" id="entertainmentDetailsIan">
+                        <thead>
+                            <tr>
+                                <th>Entertainment</th>
+                                <th>Level</th>
+                            </tr>
+                        </thead>
+                        <tbody class="ian">
+                            <tr>
+                                <th>Thomas the Tank Engine (Thomas)</th>
+                                <td>35</td>
+                            </tr>
+                            <tr>
+                                <th>Cars</th>
+                                <td>20</td>
+                            </tr>
+                            <tr>
+                                <th>Cars 2</th>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <th>Dinosaur Train</th>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th>Harlem Shake</th>
+                                <td>5</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <table class="details" id="entertainmentDetailsAinsley">
+                        <thead>
+                            <tr>
+                                <th>Entertainment</th>
+                                <th>Level</th>
+                            </tr>
+                        </thead>
+                        <tbody class="ainsley">
+                            <tr>
+                                <th>Harlem Shake</th>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <th>Doctor Who</th>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <th>HIMYM</th>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <th>Thomas</th>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <th>A Brief History of Time</th>
+                                <td>20</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </section>
                 
             <!-- WORK -->
@@ -94,13 +306,133 @@
                     <p>This year wasn’t all fun and games. Holli taught over 160 students in her GeoGraphics and art classes, many of whom now have severe crocheting addictions. Ian discovered "super heerios" and growls "Hulk SMASH" before pinwheeling his fists into your legs. Miles lost thirty pounds thanks to a gym membership and overly graphic articles on processed foods. And Ainsley transitioned to toddlerhood by learning to walk, an effort to keep up with Ian. Here are some of the other things that kept us moving.</p>
                     
                     <ul class="toggle">
-                        <li class="active"><a href="#work" data-values="30,26,6,4,26" data-labels="Pounds Lost,Supers Heerioed,Years Married,Stories Written,Meals Grilled" class="miles">Miles</a></li>
-                        <li><a href="#work" data-values="7,5,8,6,17" data-labels="Projects Crocheted,Projects Arted,Days Spent Staining Our Deck,Years Married,Weeks Gymed" class="holli">Holli</a></li>
-                        <li><a href="#work" data-values="12,28,16,26" data-labels="Weeks Swimming,Miles Run (Estimated),Autographs Written,Hulks Smashed" class="ian">Ian</a></li>
-                        <li><a href="#work" data-values="10,6,13,3" data-labels="Weeks Walking,Infections Suffered,Spit-ups,Horses Ridden" class="ainsley">Ainsley</a></li>
+                        <li class="active"><a href="#work" data-values="30,26,6,4,26" data-labels="Pounds Lost,Supers Heerioed,Years Married,Stories Written,Meals Grilled" class="miles" data-details="workDetailsMiles">Miles</a></li>
+                        
+                        <li><a href="#work" data-values="7,5,8,6,17" data-labels="Projects Crocheted,Projects Arted,Days Spent Staining Our Deck,Years Married,Weeks Gymed" class="holli" data-details="workDetailsHolli">Holli</a></li>
+                        
+                        <li><a href="#work" data-values="12,28,16,26" data-labels="Weeks Swimming,Miles Run (Estimated),Autographs Written,Hulks Smashed" class="ian" data-details="workDetailsIan">Ian</a></li>
+                        
+                        <li><a href="#work" data-values="10,6,13,3" data-labels="Weeks Walking,Infections Suffered,Spit-ups,Horses Ridden" class="ainsley" data-details="workDetailsAinsley">Ainsley</a></li>
+                        
                     </ul>
                     
-                    <canvas id="work" width="800" height="400"></canvas>
+                    <canvas id="work" width="400" height="400"></canvas>
+                    
+                    <table class="details" id="workDetailsMiles">
+                        <thead>
+                            <tr>
+                                <th>Activity</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="miles">
+                            <tr>
+                                <th>Pounds Lost</th>
+                                <td>30</td>
+                            </tr>
+                            <tr>
+                                <th>Supers Heerioed</th>
+                                <td>26</td>
+                            </tr>
+                            <tr>
+                                <th>Years Married</th>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <th>Stories Written</th>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <th>Meals Grilled</th>
+                                <td>26</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <table class="details" id="workDetailsHolli">
+                        <thead>
+                            <tr>
+                                <th>Activity</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="holli">
+                            <tr>
+                                <th>Projects Crocheted</th>
+                                <td>7</td>
+                            </tr>
+                            <tr>
+                                <th>Projects Arted</th>
+                                <td>5</td>
+                            </tr>
+                            <tr>
+                                <th>Days Spent Staining Our Deck</th>
+                                <td>8</td>
+                            </tr>
+                            <tr>
+                                <th>Years Married</th>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <th>Weeks Gymed</th>
+                                <td>17</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <table class="details" id="workDetailsIan">
+                        <thead>
+                            <tr>
+                                <th>Activity</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="ian">
+                            <tr>
+                                <th>Weeks Swimming</th>
+                                <td>12</td>
+                            </tr>
+                            <tr>
+                                <th>Miles Run (Estimated)</th>
+                                <td>28</td>
+                            </tr>
+                            <tr>
+                                <th>Autographs Written</th>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <th>Hulks Smashed</th>
+                                <td>26</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <table class="details" id="workDetailsAinsley">
+                        <thead>
+                            <tr>
+                                <th>Activity</th>
+                                <th>Value</th>
+                            </tr>
+                        </thead>
+                        <tbody class="ainsley">
+                            <tr>
+                                <th>Weeks Walking</th>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <th>Infections Suffered</th>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <th>Spit-ups</th>
+                                <td>13</td>
+                            </tr>
+                            <tr>
+                                <th>Horses Ridden</th>
+                                <td>3</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </section>
                 
             <!-- UPGRADES -->
