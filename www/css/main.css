@@ -217,10 +217,22 @@ textarea {
     vertical-align: top;
 }
 
-.reveal .details {
-    display: inline-block;
+.reveal .seeit canvas {
+    float: left;
+    height: 400px;
     width: 400px;
+}
+.reveal .seeit table {
+    float: right;
+    width: 398px;
     vertical-align: top;
+}
+.details tbody {
+    border: 1px solid white;
+    border-bottom: none;
+}
+.details tbody th, .details tbody td {
+    border-bottom: 1px solid white;
 }
 
 
