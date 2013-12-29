@@ -35,8 +35,14 @@
             };
             
             jelement.click(function( ev ) {
+                var li = $( ev.currentTarget ).parent(),
+                    lis = li.siblings();
+                
                 ev.preventDefault();
+                
                 this.draw( values, labels, details );
+                lis.removeClass('active');
+                li.addClass('active');
             }.bind( this ));
             
         }.bind( this ));
