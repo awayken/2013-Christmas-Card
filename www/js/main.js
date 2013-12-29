@@ -6,7 +6,7 @@
         progress: false,
         history: false,
         center: true,
-        theme: 'default', // available themes are in /css/theme
+        theme: '2013',
         transition: 'linear',
         transitionSpeed: 'fast'
     });
