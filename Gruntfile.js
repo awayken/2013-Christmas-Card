@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     
     var appDetails = {
         src: 'www',
-        dist: 'dist'
+        dest: '/public_html/milesrauschfamily.com/ccard/2013/'
     };
     
     // Project configuration.
@@ -37,13 +37,24 @@ module.exports = function(grunt) {
                 'js/main.js'
             ]
         },
-        server: {
+        'ftp-deploy': {
+            build: {
+                auth: {
+                    host: 'milesrausch.com',
+                    port: 21,
+                    authKey: 'milesrausch'
+                },
+                src: appDetails.src,
+                dest: appDetails.dest,
+                exclusions: [ appDetails.src + '/**/.DS_Store' ]
+            }
         }
     });
 
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-ftp-deploy');
     
     grunt.registerTask('about', function() {
         var pkg = grunt.file.readJSON('package.json'),
@@ -59,6 +70,12 @@ module.exports = function(grunt) {
     grunt.registerTask('server', function () {
         grunt.task.run([
             'connect:local'
+        ]);
+    });
+    
+    grunt.registerTask('deploy', function () {
+        grunt.task.run([
+            'ftp-deploy'
         ]);
     });
     
