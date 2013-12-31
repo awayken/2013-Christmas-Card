@@ -112,7 +112,7 @@
                     {
                         fillColor : 'rgba(46,139,87,0.5)',
                         strokeColor : 'rgb(46,139,87)',
-                        pointColor : 'rgb(220,220,220)',
+                        pointColor : 'rgb(255, 255, 255)',
                         pointStrokeColor : 'rgb(255, 255, 255)',
                         data: data
                     }

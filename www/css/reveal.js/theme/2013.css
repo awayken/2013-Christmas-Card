@@ -2,25 +2,25 @@
  * 2013 Christmas Card theme for reveal.js.
  **/
 
+@import url(http://fonts.googleapis.com/css?family=Sigmar+One|Balthazar);
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-    background: blue;
-    /*
-    background: -moz-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #555a5f), color-stop(100%, #1c1e20));
-    background: -webkit-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-    background: -o-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-    background: -ms-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-    background: radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-    */
-    background-color: blue;
+    background: #50AFA5;
+    background: -moz-radial-gradient(center, circle cover, #50AFA5 0%, #15564F 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #50AFA5), color-stop(100%, #15564F));
+    background: -webkit-radial-gradient(center, circle cover, #50AFA5 0%, #15564F 100%);
+    background: -o-radial-gradient(center, circle cover, #50AFA5 0%, #15564F 100%);
+    background: -ms-radial-gradient(center, circle cover, #50AFA5 0%, #15564F 100%);
+    background: radial-gradient(center, circle cover, #50AFA5 0%, #15564F 100%);
+    background-color: #50AFA5;
 }
 
 .reveal {
     font-family: Tahoma, sans-serif;
-    font-size: 36px;
+    font-size: 28px;
     font-weight: normal;
     letter-spacing: -0.02em;
     color: #eeeeee;
@@ -32,7 +32,7 @@ body {
 .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
     margin: 0 0 20px 0;
     color: #eeeeee;
-    font-family: Impact, sans-serif;
+    font-family: 'Sigmar One', Arial, sans-serif;
     font-weight: normal;
     line-height: 0.9em;
     letter-spacing: 0.02em;
@@ -46,6 +46,7 @@ body {
 
 #title h1 small {
     display: block;
+    font-family: 'Balthazar', Georgia, serif;
     position: relative;
 }
 #title span {
@@ -53,35 +54,33 @@ body {
     vertical-align: middle;
 }
 #title .first, #title .category {
-    font-size: 0.5em;
-    overflow: hidden;
+    font-size: 0.4em;
     width: 22%;
 }
 #title .first {
     text-align: left;
 }
 #title .last {
-    overflow: hidden;
+    font-size: 0.85em;
     width: 49%;
 }
 #title .category {
     text-align: right;
 }
 #title h1 small:before, #title h1 small:after {
+    border-bottom: 2px solid white;
     content: '';
     display: block;
-    width: 35%;
     height: 2px;
-    border-bottom: 2px solid white;
-    position: absolute;
     left: 0;
-    top: 0.5em;
+    position: absolute;
+    top: 0.6em;
+    width: 6em;
 }
 #title h1 small:after {
-    margin-top: 0;
     left: auto;
+    margin-top: 0;
     right: 0;
-    top: 0.5em;
 }
 
 /*********************************************

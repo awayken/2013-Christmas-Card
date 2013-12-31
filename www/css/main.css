@@ -98,26 +98,26 @@ textarea {
    ========================================================================== */
 
 .miles, a.miles:link, a.miles:visited {
-    color: #009DFF;
+    color: #03E3FF;
 }
 .reveal a.miles:hover, .reveal a.miles:active {
-    color: #009DFF;
+    color: #03E3FF;
     text-decoration: underline;
 }
 .reveal .miles img {
-    background: #009DFF;
+    background: #03E3FF;
     border-radius: 1em;
     padding: 0.5em 0;
 }
 .holli, a.holli:link, a.holli:visited {
-    color: #CE98A1;
+    color: #9504A3;
 }
 .reveal a.holli:hover, .reveal a.holli:active {
-    color: #CE98A1;
+    color: #9504A3;
     text-decoration: underline;
 }
 .reveal .holli img {
-    background: #CE98A1;
+    background: #9504A3;
     border-radius: 1em;
     padding: 0.5em 0;
 }
