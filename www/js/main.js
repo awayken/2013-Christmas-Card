@@ -110,10 +110,10 @@
                 labels: labels,
                 datasets: [
                     {
-                        fillColor : 'rgba(46,139,87,0.5)',
-                        strokeColor : 'rgb(46,139,87)',
-                        pointColor : 'rgb(255, 255, 255)',
-                        pointStrokeColor : 'rgb(255, 255, 255)',
+                        fillColor : 'rgba( 255, 214, 50, 0.5 )',
+                        strokeColor : '#FFD632',
+                        pointColor : '#ffffff',
+                        pointStrokeColor : '#ffffff',
                         data: data
                     }
                 ]
@@ -126,8 +126,8 @@
                 labels: labels,
                 datasets: [
                     {
-                        fillColor: 'rgba(255,165,0,0.5)',
-                        strokeColor: 'rgb(255,165,0)',
+                        fillColor: 'rgba( 255, 214, 50, 0.5 )',
+                        strokeColor: '#FFD632',
                         data: data
                     }
                 ]

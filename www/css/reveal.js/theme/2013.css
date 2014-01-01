@@ -87,7 +87,7 @@ body {
  * LINKS
  *********************************************/
 .reveal a:not(.image) {
-    color: #13daec;
+    color: #FFD632;
     text-decoration: none;
     -webkit-transition: color .15s ease;
     -moz-transition: color .15s ease;
@@ -97,14 +97,15 @@ body {
 }
 
 .reveal a:not(.image):hover {
-    color: #71e9f4;
+    color: #FFD632;
+    text-decoration: underline;
     text-shadow: none;
     border: none;
 }
 
 .reveal .roll span:after {
     color: #fff;
-    background: #0d99a5;
+    background: #FFD632;
 }
 
 /*********************************************
@@ -124,7 +125,7 @@ body {
 
 .reveal a:hover img {
     background: rgba(255, 255, 255, 0.2);
-    border-color: #13daec;
+    border-color: #FFD632;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
 }
 
@@ -133,36 +134,79 @@ body {
  *********************************************/
 .reveal .controls div.navigate-left,
 .reveal .controls div.navigate-left.enabled {
-    border-right-color: #13daec;
+    border-right-color: #FFD632;
 }
 
 .reveal .controls div.navigate-right,
 .reveal .controls div.navigate-right.enabled {
-    border-left-color: #13daec;
+    border-left-color: #FFD632;
 }
 
 .reveal .controls div.navigate-up,
 .reveal .controls div.navigate-up.enabled {
-    border-bottom-color: #13daec;
+    border-bottom-color: #FFD632;
 }
 
 .reveal .controls div.navigate-down,
 .reveal .controls div.navigate-down.enabled {
-    border-top-color: #13daec;
+    border-top-color: #FFD632;
 }
 
 .reveal .controls div.navigate-left.enabled:hover {
-    border-right-color: #71e9f4;
+    border-right-color: #FFD632;
 }
 
 .reveal .controls div.navigate-right.enabled:hover {
-    border-left-color: #71e9f4;
+    border-left-color: #FFD632;
 }
 
 .reveal .controls div.navigate-up.enabled:hover {
-    border-bottom-color: #71e9f4;
+    border-bottom-color: #FFD632;
 }
 
 .reveal .controls div.navigate-down.enabled:hover {
-    border-top-color: #71e9f4;
+    border-top-color: #FFD632;
+}
+
+/*********************************************
+ * TOGGLES
+ *********************************************/
+.toggle li {
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 1em;
+    padding: 0.35em 0.75em;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    -webkit-text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
+.toggle li.active {
+    box-shadow: 0 0 0.75em rgba(255, 214, 50, 0.85);
+}
+
+/*********************************************
+ * DETAILS TABLES
+ *********************************************/
+.reveal .details {
+    color: #A23807;
+}
+.details tbody {
+    border: 1px solid #A23807;
+    border-bottom: none;
+    border-right: none;
+}
+.details tbody th, .details tbody td {
+    background: #05F9DF;
+    border-bottom: 1px solid #A23807;
+    border-right: 1px solid #A23807;
+    padding: 0.25em 0.35em;
+}
+.details tbody tr:nth-child( 2n ) th, .details tbody tr:nth-child( 2n ) td {
+    background: #1CC2B0;
+}
+.details thead th {
+    font-weight: bold;
+    padding: 0.25em 0.35em;
+}
+.details tbody th {
+    font-weight: normal;
+    padding: 0.25em 0.35em;
 }

@@ -180,9 +180,9 @@ textarea {
     text-align: center;
 }
 .toggle li {
+    cursor: pointer;
     display: inline-block;
-    margin: 0;
-    padding: 0 0.5em;
+    margin: 0 0.5em 0 0;
     vertical-align: top;
 }
 
@@ -192,20 +192,6 @@ textarea {
 }
 .reveal .seeit table {
     width: 800px;
-}
-.details tbody {
-    border: 1px solid white;
-    border-bottom: none;
-    border-right: none;
-}
-.details tbody th, .details tbody td {
-    border-bottom: 1px solid white;
-    border-right: 1px solid white;
-    padding: 0.25em 0.35em;
-}
-.details thead th, .details tbody th {
-    font-weight: normal;
-    padding: 0.25em 0.35em;
 }
 
 
